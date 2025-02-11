@@ -12,7 +12,7 @@ const Navbar = () => {
       <div className='flex justify-between items-center'>
         {/* Logo or Home Link */}
         <Link href="#hero" className="text-xl font-bold">
-          Hamza
+          <span classNmae="text-white">Code</span> <span className="text-blue-500">With Hamza</span>
         </Link>
 
         {/* Desktop Menu */}
