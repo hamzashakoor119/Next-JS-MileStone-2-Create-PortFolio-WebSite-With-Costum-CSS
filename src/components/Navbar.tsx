@@ -8,15 +8,18 @@ const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <div className='container pt-8 px-4 sm:px-8'>
-      <div className='flex justify-between items-center'>
-        {/* Logo or Home Link */}
-        <Link href="#hero" className="text-xl font-bold">
-          <span className="text-white">Code</span> <span className="text-blue-500">With Hamza</span>
-        </Link>
+    <div className="container pt-8 px-4 sm:px-8">
+      <div className="flex justify-between items-center">
+        {/* Logo or Home Link (Left Aligned) */}
+        <div className="flex items-center">
+          <Link href="#hero" className="text-2xl font-bold">
+            <span className="text-white">Code</span>{" "}
+            <span className="text-blue-500">With Hamza</span>
+          </Link>
+        </div>
 
         {/* Desktop Menu */}
-        <ul className={`hidden md:flex gap-10 lg:gap-16`}>
+        <ul className="hidden md:flex gap-10 lg:gap-16">
           {['Home', 'About', 'Projects', 'Skills', 'Contact'].map((item, index) => (
             <li
               key={index}
@@ -29,14 +32,14 @@ const Navbar = () => {
         </ul>
 
         {/* Mobile Menu Button */}
-        <button className='md:hidden' onClick={() => setMenuOpen(!menuOpen)}>
+        <button className="md:hidden" onClick={() => setMenuOpen(!menuOpen)}>
           <FiMenu size={30} />
         </button>
       </div>
 
       {/* Mobile Dropdown Menu */}
       {menuOpen && (
-        <ul className='flex flex-col items-center gap-6 mt-4 md:hidden'>
+        <ul className="flex flex-col items-center gap-6 mt-4 md:hidden">
           {['Home', 'About', 'Projects', 'Skills', 'Contact'].map((item, index) => (
             <li
               key={index}
