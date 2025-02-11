@@ -13,8 +13,7 @@ const Navbar = () => {
         {/* Logo or Home Link (Left Aligned) */}
         <div className="flex items-center">
           <Link href="#hero" className="text-2xl font-bold">
-            <span className="text-white">Code</span>{" "}
-            <span className="text-blue-500">With Hamza</span>
+            Hamza
           </Link>
         </div>
 
